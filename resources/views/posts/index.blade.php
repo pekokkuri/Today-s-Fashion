@@ -11,17 +11,17 @@
         <div class='API'>
             <h4>服装指数,カレンダー,天気予報</h4>
         </div>
+        <a href='/posts/create'><input type="button" value="投稿する"></a>
         <div class='posts'>
             <h2 class='title'>タイムライン</h2>
             @foreach ($posts as $post)
             <div class='post'>
-                <h1 class='post_title'>
-                <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+                <h1 class='post_image'>
+                <a href="/posts/{{ $post->id }}">{{ $post->image }}</a>
                 </h1>
                 <p class='body'>
                     {{ $post->body }}
                 </p>
-                <p class='image'>image</p>
             </div>
             @endforeach
         </div>
