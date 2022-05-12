@@ -27,7 +27,6 @@ class PostController extends Controller
     {
         $post = new Post;
         $form = $request->all();
-      
 
         //s3アップロード開始
         $image = $request->file('image');
