@@ -17,12 +17,8 @@
             @foreach ($posts as $post)
             <div class='post'>
                 <h1 class='post_image'>
-                <a href="/posts/{{ $post->id }}">{{ $post->image }}</a>
-                </h1>
-                <p class='body'>
-                    {{ $post->body }}
-                </p>
-                <img src='{{ $post->image }}' width='100px' height='80px'>
+                <a href="/posts/{{ $post->id }}"/>
+                <img src='{{ $post->image }}' width='150px' height='150px'>
             </div>
             @endforeach
         </div>
