@@ -10,7 +10,7 @@
             @csrf
             <div class="image">
                 <h3>画像</h3>
-                <input type="file" name="post[image]"/>
+                <input type="file" name="image"/>
             </div>
             <div class="body">
                 <h3>投稿メッセージ</h3>

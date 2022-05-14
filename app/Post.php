@@ -6,10 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-   protected $fillable = [
-    'image',
-    'body',
-   ];
+    protected $fillable = [
+            'body',
+        ];
+    
+    protected $guarded = ['id'];
+    
+    public static $rules = [
+            'body' => 'required|max:500',
+            'image' => 'image|file',
+        ];
    
    public function getPaginateByLimit(int $limit_count = 5)
    {
