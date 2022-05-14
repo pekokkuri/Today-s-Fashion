@@ -15,8 +15,24 @@
         <div class="massage">
            <p>{{ $post->body }}</p>    
         </div>
-        <div class="footer">
+        <form action="/posts/{{ $post->id }}" id="form_delete" method="post">
+            {{ csrf_field() }}
+            {{ method_field('delete') }}
+            <input type="submit" style="display:none"> 
+            <p class='delete'>
+                <button onclick="return deletePost(this);">削除する</button>
+            </p>
+        </form>
+        <script>
+            function deletePost(e){
+                'use strict';
+                if (confirm('削除すると復元できません. \n本当に削除しますか？')){
+                   document.getElementById("form_delete").submit(); 
+                }
+            }
+        </script>
+        <p class="footer">
             <a href="/">戻る</a>
-        </div>
+        </p>
     </body>
 </html>
