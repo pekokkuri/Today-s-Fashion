@@ -9,7 +9,7 @@
     <body>
         <center><h1>Today's fashion</h1></center>
         <div class='API'>
-            <h4>天気予報,カレンダー,</h4>
+            <h4>天気予報</h4>
         </div>
         <a href='/posts/create'><input type="button" value="投稿する"></a>
         <div class='posts'>
@@ -17,12 +17,8 @@
             @foreach ($posts as $post)
             <div class='post'>
                 <h1 class='post_image'>
-                <a href="/posts/{{ $post->id }}">{{ $post->image }}</a>
-                </h1>
-                <p class='body'>
-                    {{ $post->body }}
-                </p>
-                <img src='{{ $post->image }}' width='100px' height='80px'>
+                <a href="/posts/{{ $post->id }}"/>
+                <img src='{{ $post->image }}' width='180px' height='180px'>
             </div>
             @endforeach
         </div>
