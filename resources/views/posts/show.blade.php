@@ -10,7 +10,7 @@
     </head>
     <body>
         <h1 class="image">
-           <img src='{{ $post->image }}' width='200px' height='200px'>
+           <img src='{{ $post->image }}' width='220px' height='220px'>
         </h1>
         <div class="massage">
            <p>{{ $post->body }}</p>    

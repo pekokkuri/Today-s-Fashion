@@ -18,7 +18,7 @@
             <div class='post'>
                 <h1 class='post_image'>
                 <a href="/posts/{{ $post->id }}"/>
-                <img src='{{ $post->image }}' width='150px' height='150px'>
+                <img src='{{ $post->image }}' width='180px' height='180px'>
             </div>
             @endforeach
         </div>
