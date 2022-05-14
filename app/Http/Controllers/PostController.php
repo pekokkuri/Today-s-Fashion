@@ -25,18 +25,20 @@ class PostController extends Controller
     
     public function store(Request $request, Post $post)
     {
-        $post = new Post;
-        $form = $request->all();
-
-        //s3アップロード開始
-        $image = $request->file('image');
-        // バケットの`myprefix`フォルダへアップロード
-        $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
-        // アップロードした画像のフルパスを取得
-        $post->image = Storage::disk('s3')->url($path);
-
-        $post->save();
-
+        
+        //画像があったら以下の保存処理準備を行う
+        if($request->image){
+            $image = $request->file('image');
+            $path = Storage::disk('s3')->putFile('imageuploadpractice', $image, 'public');
+            $post->image = Storage::disk('s3')->url($path);
+        }
+        
+        //bodyの保存処理準備
+        $input = $request['post']; 
+        
+        //保存処理
+        $post->fill($input)->save();
+        
         return redirect('/posts/' . $post->id);
     }
 }

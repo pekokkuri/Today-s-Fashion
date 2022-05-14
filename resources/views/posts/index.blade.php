@@ -9,7 +9,7 @@
     <body>
         <center><h1>Today's fashion</h1></center>
         <div class='API'>
-            <h4>服装指数,カレンダー,天気予報</h4>
+            <h4>天気予報,カレンダー,</h4>
         </div>
         <a href='/posts/create'><input type="button" value="投稿する"></a>
         <div class='posts'>
@@ -22,6 +22,7 @@
                 <p class='body'>
                     {{ $post->body }}
                 </p>
+                <img src='{{ $post->image }}' width='100px' height='80px'>
             </div>
             @endforeach
         </div>
