@@ -16,7 +16,9 @@
                 <h3>投稿メッセージ</h3>
                 <textarea name="post[body]" placeholder="メッセージを入力してください。"></textarea>
             </div>
-            <p><input type="submit" value="保存"/></p>
+            <p class='store'>
+                <input type="submit" value="保存"/>
+            </p>
         </form>
         <p class="back">[<a href="/">戻る</a>]</p>
     </body>
