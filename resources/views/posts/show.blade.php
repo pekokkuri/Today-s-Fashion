@@ -19,6 +19,9 @@
             {{ csrf_field() }}
             {{ method_field('delete') }}
             <input type="submit" style="display:none"> 
+            <p class="edit">
+                 <a href="/posts/{{ $post->id }}/edit"><input type="button" value="編集する"></a>
+            </p>
             <p class='delete'>
                 <button onclick="return deletePost(this);">削除する</button>
             </p>
